@@ -1,0 +1,9 @@
+{
+	"name": "alicetestdataFactory",
+	"location": "chinanorth3",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "400aa286-c045-4db2-b59e-ae1d9b08a7c8",
+		"tenantId": "954ddad8-66d7-47a8-8f9f-1316152d9587"
+	}
+}
