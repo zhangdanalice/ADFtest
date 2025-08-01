@@ -43,6 +43,7 @@
 				"MoviesDB filter(toInteger(Year) >= 1910 && toInteger(Year) <= 2000 && rlike(genres, 'Comedy')) ~> FilterYears",
 				"FilterYears sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     partitionFileNames:[($filename)],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
