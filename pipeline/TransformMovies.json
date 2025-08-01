@@ -27,6 +27,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "‘newfile.csv’"
+			}
+		},
 		"annotations": []
 	}
 }
