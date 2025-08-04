@@ -20,6 +20,10 @@
 			"schema": {
 				"value": "@dataset().DWTableName",
 				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().DWTableName",
+				"type": "Expression"
 			}
 		}
 	}
