@@ -1,0 +1,11 @@
+{
+	"name": "IncrementalSQLCopyPipeline",
+	"properties": {
+		"parameters": {
+			"tableList": {
+				"type": "array"
+			}
+		},
+		"annotations": []
+	}
+}
