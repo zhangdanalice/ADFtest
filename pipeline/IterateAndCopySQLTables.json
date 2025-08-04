@@ -62,18 +62,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "AzureSynapseAnalyticsTable1",
-									"type": "DatasetReference",
-									"parameters": {
-										"DWTableName": {
-											"value": "@item().TABLE_NAME",
-											"type": "Expression"
-										},
-										"DWSchema": {
-											"value": "@item().TABLE_SCHEMA",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "AzureSynapseAnalyticsTable2",
+									"type": "DatasetReference"
 								}
 							]
 						}
