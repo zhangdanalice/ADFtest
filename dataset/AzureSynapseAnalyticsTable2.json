@@ -7,6 +7,13 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlDWTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "item().TABLE_SCHEMA",
+				"type": "Expression"
+			},
+			"table": "item().TABLE_NAME"
+		}
 	}
 }
