@@ -431,7 +431,7 @@
 							"waitOnCompletion": false,
 							"parameters": {
 								"tableList": {
-									"value": "@activity('LookupTableList').output",
+									"value": "@activity('LookupTableList').output.value",
 									"type": "Expression"
 								}
 							}
