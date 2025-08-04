@@ -8,10 +8,10 @@
 			"server": "sqlvm",
 			"database": "master",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "Windows",
 			"userName": "alicezhang",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5M2NhODgwZC0zOTk3LTRlNTItYTcwMC1jZWE4NGMyNjkyMWMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2NjAyZDE3Yi05MGM2LTQ3NzItYWYwYS04OTNlNjNjZjc1MjYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "MySelfHostedIR",
