@@ -1,0 +1,17 @@
+{
+	"name": "AzureSynapseAnalytics1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"server": "aliceadfworkspace.sql.azuresynapse.azure.cn",
+			"database": "alicetestSQL",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "azureuser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEZGQTI4RkY1LTM4MTEtNEMxMy1CRTUyLUE0MjdENzM1MjhCMl9jYzNkZjAwNS05NzRiLTRmYmEtYWE4ZS0wODYzOTJkNjEwY2QiDQp9"
+		}
+	}
+}
