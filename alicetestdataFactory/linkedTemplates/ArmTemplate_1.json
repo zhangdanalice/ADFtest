@@ -39,7 +39,7 @@
 								{
 									"type": "Query",
 									"text": {
-										"value": "@concat('DROP TABLE ', pipeline().parameters.targetTableName)\n",
+										"value": "@concat('DROP TABLE', pipeline().parameters.targetTableName)\n",
 										"type": "Expression"
 									}
 								}
