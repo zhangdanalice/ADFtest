@@ -157,10 +157,6 @@
 										},
 										"sink": {
 											"type": "SqlDWSink",
-											"preCopyScript": {
-												"value": "IF EXISTS (SELECT * FROM [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]) TRUNCATE TABLE [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]",
-												"type": "Expression"
-											},
 											"allowCopyCommand": true,
 											"copyCommandSettings": {},
 											"tableOption": "autoCreate",
