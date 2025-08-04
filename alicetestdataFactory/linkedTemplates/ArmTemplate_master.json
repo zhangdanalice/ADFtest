@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseLinkedService'"
 		},
+		"AzureSqlDatabaseLinkedServicenew_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseLinkedServicenew'"
+		},
 		"AzureSynapseAnalytics1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSynapseAnalytics1'"
@@ -34,6 +38,10 @@
 		"Office365LinkedService_servicePrincipalKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'servicePrincipalKey' of 'Office365LinkedService'"
+		},
+		"SqlServerLinkedService_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServerLinkedService'"
 		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"type": "string",
@@ -67,6 +75,18 @@
 			"type": "string",
 			"defaultValue": "azureuser"
 		},
+		"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mysqlserver.database.chinacloudapi.cn"
+		},
+		"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sinkdb"
+		},
+		"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azureuser"
+		},
 		"AzureSynapseAnalytics1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "aliceadfworkspace.sql.azuresynapse.azure.cn"
@@ -82,6 +102,18 @@
 		"Office365LinkedService_properties_typeProperties_servicePrincipalId": {
 			"type": "string",
 			"defaultValue": "14e515bf-676f-4c28-a9ad-010b60c6d726"
+		},
+		"SqlServerLinkedService_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlvm"
+		},
+		"SqlServerLinkedService_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "master"
+		},
+		"SqlServerLinkedService_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "alicezhang"
 		},
 		"containerUri": {
 			"type": "string",
@@ -125,6 +157,9 @@
 					"AzureSqlDatabaseLinkedService_password": {
 						"value": "[parameters('AzureSqlDatabaseLinkedService_password')]"
 					},
+					"AzureSqlDatabaseLinkedServicenew_password": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServicenew_password')]"
+					},
 					"AzureSynapseAnalytics1_password": {
 						"value": "[parameters('AzureSynapseAnalytics1_password')]"
 					},
@@ -155,6 +190,15 @@
 					"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_userName')]"
 					},
+					"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServicenew_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServicenew_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServicenew_properties_typeProperties_userName')]"
+					},
 					"AzureSynapseAnalytics1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSynapseAnalytics1_properties_typeProperties_server')]"
 					},
@@ -184,6 +228,18 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServerLinkedService_password": {
+						"value": "[parameters('SqlServerLinkedService_password')]"
+					},
+					"SqlServerLinkedService_properties_typeProperties_server": {
+						"value": "[parameters('SqlServerLinkedService_properties_typeProperties_server')]"
+					},
+					"SqlServerLinkedService_properties_typeProperties_database": {
+						"value": "[parameters('SqlServerLinkedService_properties_typeProperties_database')]"
+					},
+					"SqlServerLinkedService_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServerLinkedService_properties_typeProperties_userName')]"
 					}
 				}
 			},

@@ -20,10 +20,16 @@
 		"AzureSqlDatabaseLinkedService_password": {
 			"value": ""
 		},
+		"AzureSqlDatabaseLinkedServicenew_password": {
+			"value": ""
+		},
 		"AzureSynapseAnalytics1_password": {
 			"value": ""
 		},
 		"Office365LinkedService_servicePrincipalKey": {
+			"value": ""
+		},
+		"SqlServerLinkedService_password": {
 			"value": ""
 		},
 		"ADLSGen2_properties_typeProperties_url": {
@@ -50,6 +56,15 @@
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 			"value": "azureuser"
 		},
+		"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_server": {
+			"value": "mysqlserver.database.chinacloudapi.cn"
+		},
+		"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_database": {
+			"value": "sinkdb"
+		},
+		"AzureSqlDatabaseLinkedServicenew_properties_typeProperties_userName": {
+			"value": "azureuser"
+		},
 		"AzureSynapseAnalytics1_properties_typeProperties_server": {
 			"value": "aliceadfworkspace.sql.azuresynapse.azure.cn"
 		},
@@ -61,6 +76,15 @@
 		},
 		"Office365LinkedService_properties_typeProperties_servicePrincipalId": {
 			"value": "14e515bf-676f-4c28-a9ad-010b60c6d726"
+		},
+		"SqlServerLinkedService_properties_typeProperties_server": {
+			"value": "sqlvm"
+		},
+		"SqlServerLinkedService_properties_typeProperties_database": {
+			"value": "master"
+		},
+		"SqlServerLinkedService_properties_typeProperties_userName": {
+			"value": "alicezhang"
 		},
 		"containerUri": {
 			"value": ""
