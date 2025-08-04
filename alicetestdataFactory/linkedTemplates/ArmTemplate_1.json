@@ -913,7 +913,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "pipeline().parameters.tableList",
+								"value": "@pipeline().parameters.tableList",
 								"type": "Expression"
 							},
 							"activities": [
