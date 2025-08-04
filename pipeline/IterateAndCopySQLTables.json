@@ -41,7 +41,7 @@
 										"value": "IF EXISTS (\n    SELECT * FROM INFORMATION_SCHEMA.TABLES\n    WHERE TABLE_SCHEMA = '@{item().TABLE_SCHEMA}'\n    AND TABLE_NAME = '@{item().TABLE_NAME}'\n)\nBEGIN\n    DECLARE @sql NVARCHAR(MAX) = 'TRUNCATE TABLE [' + '@{item().TABLE_SCHEMA}' + '].[' + '@{item().TABLE_NAME}' + ']';\n    EXEC sp_executesql @sql;\nEND\n",
 										"type": "Expression"
 									},
-									"allowCopyCommand": true,
+									"writeBehavior": "Insert",
 									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
@@ -52,6 +52,14 @@
 										"type": "LinkedServiceReference"
 									},
 									"path": "adfv2tutorial"
+								},
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
 								}
 							},
 							"inputs": [
