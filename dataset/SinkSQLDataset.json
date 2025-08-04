@@ -5,8 +5,19 @@
 			"referenceName": "AzureSqlDatabaseLinkedServicenew",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"SinkTableName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"table": {
+				"value": "@dataset().SinkTableName",
+				"type": "Expression"
+			}
+		}
 	}
 }
