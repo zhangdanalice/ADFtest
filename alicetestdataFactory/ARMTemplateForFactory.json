@@ -1692,10 +1692,10 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "*",
+						"fileName": "part-00000-10a59991-1ec4-49f9-98f7-aa3c2ce2ded3-c000.csv",
 						"fileSystem": "sample-data"
 					},
-					"columnDelimiter": "|",
+					"columnDelimiter": ",",
 					"escapeChar": "\\",
 					"firstRowAsHeader": true,
 					"quoteChar": "\""
