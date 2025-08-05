@@ -212,8 +212,8 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "inputEmp.txt",
-						"fileSystem": "adfv2tutorial"
+						"fileName": "*",
+						"fileSystem": "sample-data"
 					},
 					"columnDelimiter": "|",
 					"escapeChar": "\\",
@@ -1112,17 +1112,17 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/CopyPipeline_v6e')]",
+			"name": "[concat(parameters('factoryName'), '/Adfv2QuickStartPipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"activities": [
 					{
-						"name": "addcolumn",
-						"type": "ExecuteDataFlow",
+						"name": "Copyfromblobtoblob",
+						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
-							"timeout": "12:00:00",
+							"timeout": "0.12:00:00",
 							"retry": 0,
 							"retryIntervalInSeconds": 30,
 							"secureOutput": false,
@@ -1130,42 +1130,61 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"dataflow": {
-								"referenceName": "testdataflow",
-								"type": "DataFlowReference",
-								"parameters": {
-									"filename": {
-										"value": "'@{pipeline().parameters.filename}'",
-										"type": "Expression"
-									}
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
 								},
-								"datasetParameters": {
-									"source1": {},
-									"sink1": {}
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
 								}
 							},
-							"staging": {},
-							"compute": {
-								"coreCount": 8,
-								"computeType": "General"
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
 							},
-							"traceLevel": "Coarse"
-						}
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_z2l",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "SourceDataset_z2l",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
 					}
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"parameters": {
-					"filename": {
-						"type": "string"
-					}
-				},
-				"annotations": [],
-				"lastPublishTime": "2025-07-31T10:33:41Z"
+				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/testdataflow')]"
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_z2l')]"
 			]
 		}
 	]
