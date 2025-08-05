@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "part-00000-10a59991-1ec4-49f9-98f7-aa3c2ce2ded3-c000.csv",
-				"fileSystem": "sample-data"
+				"fileName": "‘newfile.csv’",
+				"fileSystem": "sink"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
