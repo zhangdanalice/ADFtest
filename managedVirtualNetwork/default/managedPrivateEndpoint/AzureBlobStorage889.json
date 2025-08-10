@@ -1,7 +1,0 @@
-{
-	"name": "AzureBlobStorage889",
-	"properties": {
-		"privateLinkResourceId": "/subscriptions/9ee035f9-b056-4a68-8553-d4ae4a8e0855/resourceGroups/AFDrg/providers/Microsoft.Storage/storageAccounts/adftestcopysa",
-		"groupId": "blob"
-	}
-}
