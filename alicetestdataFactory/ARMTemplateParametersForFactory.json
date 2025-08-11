@@ -5,8 +5,32 @@
 		"factoryName": {
 			"value": "alicetestdataFactory"
 		},
-		"AzureBlobStorage1_connectionString": {
+		"AzureSqlDWLinkedService_password": {
 			"value": ""
+		},
+		"AzureSqlDatabaseLinkedService_password": {
+			"value": ""
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDWLinkedService_properties_typeProperties_server": {
+			"value": "aliceadfworkspace.sql.azuresynapse.azure.cn"
+		},
+		"AzureSqlDWLinkedService_properties_typeProperties_database": {
+			"value": "bulkcopysyncdb"
+		},
+		"AzureSqlDWLinkedService_properties_typeProperties_userName": {
+			"value": "sqladminuser"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
+			"value": "mysqlserver.database.chinacloudapi.cn"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
+			"value": "sinkdb"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
+			"value": "azureuser"
 		}
 	}
 }

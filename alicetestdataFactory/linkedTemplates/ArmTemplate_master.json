@@ -7,9 +7,41 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "alicetestdataFactory"
 		},
-		"AzureBlobStorage1_connectionString": {
+		"AzureSqlDWLinkedService_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+			"metadata": "Secure string for 'password' of 'AzureSqlDWLinkedService'"
+		},
+		"AzureSqlDatabaseLinkedService_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseLinkedService'"
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
+		},
+		"AzureSqlDWLinkedService_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "aliceadfworkspace.sql.azuresynapse.azure.cn"
+		},
+		"AzureSqlDWLinkedService_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "bulkcopysyncdb"
+		},
+		"AzureSqlDWLinkedService_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladminuser"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mysqlserver.database.chinacloudapi.cn"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sinkdb"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azureuser"
 		},
 		"containerUri": {
 			"type": "string",
@@ -38,8 +70,32 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureBlobStorage1_connectionString": {
-						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					"AzureSqlDWLinkedService_password": {
+						"value": "[parameters('AzureSqlDWLinkedService_password')]"
+					},
+					"AzureSqlDatabaseLinkedService_password": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_password')]"
+					},
+					"AzureStorageLinkedService_connectionString": {
+						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
+					},
+					"AzureSqlDWLinkedService_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDWLinkedService_properties_typeProperties_server')]"
+					},
+					"AzureSqlDWLinkedService_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDWLinkedService_properties_typeProperties_database')]"
+					},
+					"AzureSqlDWLinkedService_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDWLinkedService_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_userName')]"
 					}
 				}
 			},
