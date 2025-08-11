@@ -41,7 +41,8 @@
 										"value": "IF EXISTS (SELECT * FROM [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]) TRUNCATE TABLE [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]",
 										"type": "Expression"
 									},
-									"allowCopyCommand": true,
+									"writeBehavior": "Insert",
+									"sqlWriterUseTableLock": false,
 									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
@@ -52,6 +53,14 @@
 										"type": "LinkedServiceReference"
 									},
 									"path": ""
+								},
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
 								}
 							},
 							"inputs": [
