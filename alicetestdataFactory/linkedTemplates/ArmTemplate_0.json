@@ -224,7 +224,7 @@
 												"referenceName": "AzureStorageLinkedService",
 												"type": "LinkedServiceReference"
 											},
-											"path": "copytest"
+											"path": ""
 										}
 									},
 									"inputs": [
