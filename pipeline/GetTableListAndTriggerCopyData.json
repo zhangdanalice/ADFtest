@@ -52,7 +52,13 @@
 						"referenceName": "IterateAndCopySQLTables",
 						"type": "PipelineReference"
 					},
-					"waitOnCompletion": false
+					"waitOnCompletion": false,
+					"parameters": {
+						"tableList": {
+							"value": "@activity('LookupTableList').output.value",
+							"type": "Expression"
+						}
+					}
 				}
 			}
 		],
