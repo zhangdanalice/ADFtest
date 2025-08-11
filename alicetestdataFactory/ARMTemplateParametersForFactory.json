@@ -27,7 +27,7 @@
 			"value": "mysqlserver.database.chinacloudapi.cn"
 		},
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
-			"value": "sinkdb"
+			"value": "sampledatabase"
 		},
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 			"value": "azureuser"

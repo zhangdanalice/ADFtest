@@ -37,7 +37,7 @@
 		},
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "sinkdb"
+			"defaultValue": "sampledatabase"
 		},
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 			"type": "string",
