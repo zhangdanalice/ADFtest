@@ -48,7 +48,8 @@
 									"linkedServiceName": {
 										"referenceName": "AzureStorageLinkedService",
 										"type": "LinkedServiceReference"
-									}
+									},
+									"path": "copytest"
 								},
 								"translator": {
 									"type": "TabularTranslator",
