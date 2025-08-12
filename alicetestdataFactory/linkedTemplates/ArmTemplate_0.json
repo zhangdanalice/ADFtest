@@ -234,23 +234,18 @@
 										},
 										"sink": {
 											"type": "SqlDWSink",
-											"preCopyScript": {
-												"value": "IF EXISTS (SELECT * FROM [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]) TRUNCATE TABLE [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]",
-												"type": "Expression"
-											},
-											"writeBehavior": "Insert",
-											"sqlWriterUseTableLock": false,
+											"allowCopyCommand": true,
+											"copyCommandSettings": {},
 											"tableOption": "autoCreate",
 											"disableMetricsCollection": false
 										},
-										"enableStaging": false,
-										"translator": {
-											"type": "TabularTranslator",
-											"typeConversion": true,
-											"typeConversionSettings": {
-												"allowDataTruncation": true,
-												"treatBooleanAsNumber": false
-											}
+										"enableStaging": true,
+										"stagingSettings": {
+											"linkedServiceName": {
+												"referenceName": "AzureDataLakeStorageService",
+												"type": "LinkedServiceReference"
+											},
+											"path": "staging"
 										}
 									},
 									"inputs": [
@@ -293,7 +288,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/AzureSqlDatabaseDataset')]",
-				"[concat(variables('factoryId'), '/datasets/AzureSqlDWDataset')]"
+				"[concat(variables('factoryId'), '/datasets/AzureSqlDWDataset')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorageService')]"
 			]
 		},
 		{
