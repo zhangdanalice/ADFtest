@@ -49,7 +49,7 @@
 								"enableStaging": true,
 								"stagingSettings": {
 									"linkedServiceName": {
-										"referenceName": "AzureStorageLinkedService",
+										"referenceName": "AzureDataLakeStorageService",
 										"type": "LinkedServiceReference"
 									},
 									"path": ""
