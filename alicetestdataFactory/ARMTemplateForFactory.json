@@ -183,14 +183,7 @@
 											"tableOption": "autoCreate",
 											"disableMetricsCollection": false
 										},
-										"enableStaging": true,
-										"stagingSettings": {
-											"linkedServiceName": {
-												"referenceName": "AzureDataLakeStorageService",
-												"type": "LinkedServiceReference"
-											},
-											"path": "staging"
-										},
+										"enableStaging": false,
 										"translator": {
 											"type": "TabularTranslator",
 											"typeConversion": true,
@@ -240,8 +233,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/AzureSqlDatabaseDataset')]",
-				"[concat(variables('factoryId'), '/datasets/AzureSqlDWDataset')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorageService')]"
+				"[concat(variables('factoryId'), '/datasets/AzureSqlDWDataset')]"
 			]
 		},
 		{
