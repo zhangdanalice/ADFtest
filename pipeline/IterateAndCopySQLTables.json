@@ -52,7 +52,7 @@
 										"referenceName": "AzureDataLakeStorageService",
 										"type": "LinkedServiceReference"
 									},
-									"path": ""
+									"path": "staging"
 								},
 								"translator": {
 									"type": "TabularTranslator",
