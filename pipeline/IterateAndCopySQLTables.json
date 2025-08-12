@@ -65,17 +65,7 @@
 							"outputs": [
 								{
 									"referenceName": "AzureSqlDWDataset",
-									"type": "DatasetReference",
-									"parameters": {
-										"DWTableName": {
-											"value": "@item().TABLE_NAME",
-											"type": "Expression"
-										},
-										"DWSchema": {
-											"value": "@item().TABLE_SCHEMA",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}
