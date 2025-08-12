@@ -14,6 +14,9 @@
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"AzureDataLakeStorageService_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDWLinkedService_properties_typeProperties_server": {
 			"value": "aliceadfworkspace.sql.azuresynapse.azure.cn"
 		},
@@ -31,6 +34,9 @@
 		},
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 			"value": "azureuser"
+		},
+		"AzureDataLakeStorageService_properties_typeProperties_url": {
+			"value": "https://adlsalicesa.dfs.core.chinacloudapi.cn/"
 		},
 		"containerUri": {
 			"value": ""
