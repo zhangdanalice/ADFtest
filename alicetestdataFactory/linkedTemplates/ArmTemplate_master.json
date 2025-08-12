@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "alicetestdataFactory"
 		},
+		"AzureDataLakeStorageService_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageService'"
+		},
 		"AzureSqlDWLinkedService_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDWLinkedService'"
@@ -19,9 +23,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
-		"AzureDataLakeStorageService_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageService'"
+		"AzureDataLakeStorageService_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsalicesa.dfs.core.chinacloudapi.cn/"
 		},
 		"AzureSqlDWLinkedService_properties_typeProperties_server": {
 			"type": "string",
@@ -46,10 +50,6 @@
 		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "azureuser"
-		},
-		"AzureDataLakeStorageService_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://adlsalicesa.dfs.core.chinacloudapi.cn/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -78,6 +78,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureDataLakeStorageService_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageService_accountKey')]"
+					},
 					"AzureSqlDWLinkedService_password": {
 						"value": "[parameters('AzureSqlDWLinkedService_password')]"
 					},
@@ -87,8 +90,8 @@
 					"AzureStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
 					},
-					"AzureDataLakeStorageService_accountKey": {
-						"value": "[parameters('AzureDataLakeStorageService_accountKey')]"
+					"AzureDataLakeStorageService_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageService_properties_typeProperties_url')]"
 					},
 					"AzureSqlDWLinkedService_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDWLinkedService_properties_typeProperties_server')]"
@@ -107,9 +110,6 @@
 					},
 					"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_userName')]"
-					},
-					"AzureDataLakeStorageService_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorageService_properties_typeProperties_url')]"
 					}
 				}
 			},
