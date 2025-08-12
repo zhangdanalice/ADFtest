@@ -41,7 +41,14 @@
 									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
-								"enableStaging": false
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "AzureDataLakeStorageService",
+										"type": "LinkedServiceReference"
+									},
+									"path": "staging"
+								}
 							},
 							"inputs": [
 								{
